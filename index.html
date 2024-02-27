@@ -4,35 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <title>Cloud☁️Ceiling App</title>
 </head>
 
 <body>
+    <div class="weatherapp">
+        <header>
+            <form>
+                <input type="search" placeholder="Enter a city...." required />
+                <input type="submit" value="Search" />
+            </form>
+        </header>
+        <main>
+            <div>
+                <h1>London</h1>
+                <p>Tuesday 12:11, broken clouds
+                    </br>
+                    Humidity: 68%, Wind: 4.12km/h</p>
+            </div>
+            <div>
+                ⛅ 12 °C
+            </div>
+        </main>
 
-    <header>
-        <form>
-            <input type="search" placeholder="Enter a city...." required />
-            <input type="submit" value="Search" />
-        </form>
-    </header>
-    <main>
-        <div>
-            <h1>London</h1>
-            <p>Tuesday 12:11, broken clouds
-                </br>
-                Humidity: 68%, Wind: 4.12km/h</p>
-        </div>
-        <div>
-            ⛅ 12 °C
-        </div>
-    </main>
 
-
-    <footer> Cloud-Ceiling App was coded by <a href="https://github.com/RoxyKeatings" target="_blank">Roxanne
-            Keatings</a> ,my code is <a href="https://github.com/RoxyKeatings/cloud-ceiling"
-            target="_blank">open-sourced on GitHub </a> and <a href="https://cloud-ceiling.netlify.app/"
-            target="_blank">hosted on Netlify.</a>
-    </footer>
+        <footer> Cloud-Ceiling App was coded by <a href="https://github.com/RoxyKeatings" target="_blank">Roxanne
+                Keatings</a> ,my code is <a href="https://github.com/RoxyKeatings/cloud-ceiling"
+                target="_blank">open-sourced on GitHub </a> and <a href="https://cloud-ceiling.netlify.app/"
+                target="_blank">hosted on Netlify.</a>
+        </footer>
+    </div>
 </body>
 
 </html>
