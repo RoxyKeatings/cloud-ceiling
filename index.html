@@ -15,15 +15,16 @@
 <body>
     <div class="weatherapp">
         <header>
-            <form class="search-form">
-                <input type="search" placeholder="Enter a city...." required class="search-form-input" />
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="Enter a city...." required class="search-form-input"
+                    id="search-form-input" />
                 <input type="submit" value="Search" class="search-form-button" />
             </form>
         </header>
         <main>
             <div class="current-weather-data">
                 <div>
-                    <h1 class="current-city-name">London</h1>
+                    <h1 class="current-city-name" id="city">London</h1>
                     <p class="current-city-details">Tuesday 12:11, broken clouds
                         </br>
                         Humidity: <span class="humidity"><strong>68%</strong></span>, Wind: <span
@@ -45,6 +46,7 @@
                 on GitHub </a> and <a href="https://cloud-ceiling.netlify.app/" target="_blank">hosted on Netlify.</a>
         </footer>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
