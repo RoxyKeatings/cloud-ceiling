@@ -35,6 +35,46 @@ header {
   padding: 20px 25px;
   font-size: 15px;
 }
+main {
+  padding: 30px 0;
+}
+
+.current-weather-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-city-name {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+.current-city-details {
+  margin: 0;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.humidity {
+  color: rgb(5, 2, 32);
+}
+.wind {
+  color: rgb(5, 2, 32);
+}
+.current-city-temperature-container {
+  display: flex;
+}
+.current-temp-icon {
+  font-size: 44px;
+  margin-top: 22px;
+}
+.current-temp-value {
+  font-size: 88px;
+  margin-left: 11px;
+}
+.current-temp-unit {
+  font-size: 22px;
+  margin-top: 44px;
+}
 a {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: none;
