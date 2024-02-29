@@ -64,12 +64,14 @@ main {
   display: flex;
 }
 .current-temp-icon {
-  font-size: 44px;
-  margin-top: 22px;
+  width: 88px;
+  line-height: 88px;
+  margin-top: 44px;
 }
 .current-temp-value {
   font-size: 88px;
-  margin-left: 11px;
+  line-height: 88px;
+  margin-top: 44px;
 }
 .current-temp-unit {
   font-size: 22px;
