@@ -49,6 +49,10 @@ main {
   font-size: 38px;
   line-height: 48px;
 }
+.current-country-name {
+  margin: 0;
+  font-size: 16px;
+}
 .current-city-details {
   margin: 0;
   font-size: 16px;
