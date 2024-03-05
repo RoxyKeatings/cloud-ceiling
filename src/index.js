@@ -66,7 +66,55 @@ function submittedCitySearch(event) {
 
   searchCity(searchInput.value);
 }
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+function getForecast(city) {
+  let apiKey = "89b05tfca20b16d5f5e3c646e1oa37db";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
+      <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${formatDay(day.time)}</div>
+      <div class="weather-forecast-icon">
+        <img
+          src="${day.condition.icon_url}"
+          width="45px"
+        />
+      </div>
+      <div class="weather-forecast-description">${
+        day.condition.description
+      }</div>
+      <div class="weather-forecast-temperature">
+        <span class="weather-forecast-temperature-max">${Math.round(
+          day.temperature.maximum
+        )}° | </span>
+        <span class="weather-forecast-temperature-min">${Math.round(
+          day.temperature.minimum
+        )}°</span>
+      </div>
+    </div>
+  </div>
+`;
+    }
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", submittedCitySearch);
 
-searchCity("London");
+searchCity("Komoka");
